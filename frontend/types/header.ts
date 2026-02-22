@@ -22,7 +22,7 @@ export interface HeaderCtaButton {
   enabled: boolean
   text: string
   url: string
-  style: string
+  style: 'primary' | 'secondary' | 'outline'
 }
 
 export interface HeaderSettings {
