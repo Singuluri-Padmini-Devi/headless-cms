@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { HeaderSettings } from '@/types/header'
-import { Button } from './ui/Button'
+import { Button } from '@/components/ui/Button'
+import styles from './Header.module.css'
 
 interface HeaderProps {
   settings: HeaderSettings
@@ -41,7 +42,7 @@ export default function Header({ settings }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className={`flex-shrink-0 ${styles['logo-wrap']}`}>
             {settings.logo ? (
               <Link href="/" className="block">
                 <Image
@@ -49,7 +50,7 @@ export default function Header({ settings }: HeaderProps) {
                   alt={settings.logo.alt}
                   width={settings.logo.width}
                   height={settings.logo.height}
-                  className="h-8 lg:h-10 w-auto"
+                  className="lg:h-10 w-auto"
                   priority
                 />
               </Link>
