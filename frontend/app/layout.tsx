@@ -22,7 +22,7 @@ async function getHeaderSettings() {
     return data.headerSettings
   } catch (error) {
     console.error('Error fetching header settings:', error)
-    // Return default settings if API fails
+    // Return the default settings if API fails
     return {
       navigation: [],
       buttons: [],
