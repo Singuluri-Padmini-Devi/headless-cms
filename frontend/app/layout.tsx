@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 async function getHeaderSettings() {
   try {
-    const data: HeaderResponse = await graphqlClient.request(HEADER_QUERY)
+    const data = await graphqlClient.request<HeaderResponse>(HEADER_QUERY)
     return data.headerSettings
   } catch (error) {
     console.error('Error fetching header settings:', error)
@@ -28,7 +28,7 @@ async function getHeaderSettings() {
       buttons: [],
       sticky: true,
       transparent: false,
-      style: 'white',
+      style: 'white' as const,
     }
   }
 }
