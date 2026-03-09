@@ -29,12 +29,6 @@
 }
 
 /* LEFT GRID */
-.highlightsGrid {
-  /* border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-left: 1px solid rgba(0, 0, 0, 0.08); */
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(6px);
-}
 
 .row {
   display: grid;
