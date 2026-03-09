@@ -54,3 +54,32 @@ export const HERO_SLIDER_QUERY = `
     }
   }
 `
+export const CROSSLINK_HIGHLIGHTS_QUERY = `
+  query CrosslinkHighlights {
+    page(id: "/", idType: URI) {
+      crosslinkHighlights {
+        highlightsTitle
+        highlights {
+          highlightTitle
+          highlightDescription
+          icon {
+            node {
+              sourceUrl
+              altText
+            }
+          }
+        }
+        teamImages {
+          edges {
+            node {
+              sourceUrl
+              altText
+            }
+          }
+        }
+        teamButtonText
+        teamButtonLink
+      }
+    }
+  }
+`
