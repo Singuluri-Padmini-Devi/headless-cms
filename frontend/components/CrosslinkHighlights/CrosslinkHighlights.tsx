@@ -56,7 +56,7 @@ export default function CrosslinkHighlights({ data }: { data: CrosslinkHighlight
 
         <div className={styles.layout}>
           {/* Left: Highlights grid */}
-          <div className={styles.highlightsGrid}>
+          <div>
             <div className={styles.row}>
               {topRow.map((item, idx) => (
                 <div key={`${item.highlightTitle || 'item'}-${idx}`} className={styles.card}>
