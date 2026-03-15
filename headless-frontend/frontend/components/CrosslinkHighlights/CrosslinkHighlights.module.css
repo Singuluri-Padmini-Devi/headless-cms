@@ -1,0 +1,201 @@
+.section {
+  position: relative;
+  padding: 48px 0 72px;
+}
+
+.container {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0 0 22px;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 0.2px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.headingBold {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+/* LEFT GRID */
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  min-height: 190px;
+  padding: 26px 24px 22px;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); */
+}
+
+.iconWrap {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 16px;
+}
+
+.iconImg {
+  object-fit: contain;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b3c66;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  white-space: pre-line;
+}
+
+.cardDesc {
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgba(0, 0, 0, 0.62);
+  white-space: pre-line;
+}
+
+/* RIGHT TEAM COLLAGE */
+.teamArea {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  justify-items: end;
+}
+
+.collage {
+  position: relative;
+  width: min(520px, 92vw);
+  height: 360px;
+}
+
+.tile {
+  position: absolute;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.placeholder {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.placeholderInner {
+  width: 100%;
+  height: 100%;
+}
+
+/* Big image bottom-right */
+.big {
+  right: 78px;
+  bottom: 81px;
+  width: 93px;
+  height: 124px;
+}
+
+/* Small tiles positions */
+.s1 {
+  right: 330px;
+  bottom: 170px;
+  width: 93px;
+  height: 124px;
+}
+
+.s2 {
+  right: 230px;
+  bottom: 210px;
+  width: 93px;
+  height: 124px;
+}
+
+.s3 {
+  right: 151px;
+  bottom: 210px;
+  width: 73px;
+  height: 91px;
+}
+
+.s4 {
+  right: 330px;
+  bottom: 71px;
+  width: 70px;
+  height: 93px;
+}
+
+.s5 {
+  right: 178px;
+  bottom: 12px;
+  width: 145px;
+  height: 192px;
+}
+
+.teamLink {
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #1e74b7;
+  text-decoration: none;
+  justify-self: center;
+
+}
+
+.teamLink:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+  }
+
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .collage {
+    height: 390px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .cardDesc {
+    font-size: 16px;
+  }
+
+  .collage {
+    height: 320px;
+  }
+
+  .big {
+    width: 280px;
+    height: 260px;
+  }
+}
