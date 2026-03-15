@@ -83,3 +83,32 @@ export const CROSSLINK_HIGHLIGHTS_QUERY = `
     }
   }
 `
+export const OUR_PORTFOLIO_QUERY = `
+  query OurPortfolio {
+    page(id: "/", idType: URI) {
+      ourPortfolio {
+        sectionTitle
+        sectionDescription
+        buttonText
+        buttonLink
+        portfolioSlides {
+          founderName
+          founderRole
+          slideLink
+          founderImage {
+            node {
+              sourceUrl
+              altText
+            }
+          }
+          companyLogo {
+            node {
+              sourceUrl
+              altText
+            }
+          }
+        }
+      }
+    }
+  }
+`
